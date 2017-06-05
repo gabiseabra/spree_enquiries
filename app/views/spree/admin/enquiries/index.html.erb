@@ -1,0 +1,55 @@
+<% content_for :page_title do %>
+  <%= plural_resource_name(Spree::Enquiry) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_enquiry),
+                     new_object_url,
+                     class: 'btn-success',
+                     icon: 'add',
+                     id: 'admin_new_enquiry' %>
+<% end if can? :create, Spree::Enquiry %>
+
+<% if @enquiries.any? %>
+  <table class="table" id="listing_enquiries" data-hook>
+    <thead>
+      <tr data-hook="enquiries_header">
+        <th><%= sort_link @search, :id, Spree.t(:id) %></th>
+        <th><%= Spree.t(:state) %></th>
+        <th>
+          <%= sort_link @search,
+                        :first_name,
+                        %i(first_name last_name),
+                        Spree.t(:name),
+                        default_order: {
+                          last_name: 'asc',
+                          first_name: 'desc'
+                        } %>
+        </th>
+        <th><%= sort_link @search, :start_date, Spree.t(:start_date) %></th>
+        <th><%= sort_link @search, :end_date, Spree.t(:end_date) %></th>
+        <th class="actions"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @enquiries.each do |enquiry| %>
+        <tr id="<%= spree_dom_id enquiry %>" data-hook="enquiries_row">
+          <td><%= enquiry.id %></td>
+          <td><%= enquiry.state %></td>
+          <td><%= enquiry.full_name %></td>
+          <td><%= enquiry.start_date.to_date.to_s(:short_date) %></td>
+          <td><%= enquiry.end_date.to_date.to_s(:short_date) if enquiry.end_date %></td>
+          <td class="actions actions-2 text-right">
+            <%= link_to_edit(enquiry, no_text: true) if can? :edit, enquiry %>
+            <%= link_to_delete(enquiry, no_text: true) if can? :delete, enquiry %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::Enquiry)) %>,
+    <%= link_to(Spree.t(:add_one), new_object_url) if can? :create, Spree::Enquiry %>!
+  </div>
+<% end %>
