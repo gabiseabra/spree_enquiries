@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <div class="form-group">
+      <%= label_tag :q_description_cont, Spree.t(:description) %>
+      <%= f.text_field :description_cont, tabindex: 1, class: "form-control js-quick-search-target" %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :q_first_name_cont, Spree.t(:first_name) %>
+      <%= f.text_field :first_name_cont, tabindex: 1, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :q_show_only_active do %>
+        <%= f.check_box :show_only_active, { checked: @show_only_active }, '1', '0' %>
+        <%= Spree.t(:show_only_active) %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6">
+    <div class="form-group">
+      <%= label_tag :q_state_eq, Spree.t(:state) %>
+      <%= f.select :state_eq, Spree::Enquiry.states.keys.to_a, 
+                   { include_blank: true },
+                   { tabinxed: 1, class: "select2 js-filterable" } %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :q_last_name_cont, Spree.t(:last_name) %>
+      <%= f.text_field :last_name_cont, tabindex: 1, class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+<div data-hook="admin_promotions_index_search_buttons" class="form-actions">
+  <%= button Spree.t(:filter_results), 'search' %>
+</div>

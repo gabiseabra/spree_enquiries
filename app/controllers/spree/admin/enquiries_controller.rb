@@ -11,6 +11,8 @@ module Spree
         return @collection if @collection.present?
         # params[:q] can be blank upon pagination
         params[:q] = {} if params[:q].blank?
+        @show_only_active = params[:q][:show_only_active] == '1'
+        params[:q][:end_date_gt] = Date.today if @show_only_active
 
         @collection = super
         @search = @collection.ransack(params[:q])

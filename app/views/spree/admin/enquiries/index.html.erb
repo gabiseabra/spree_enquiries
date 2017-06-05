@@ -10,6 +10,16 @@
                      id: 'admin_new_enquiry' %>
 <% end if can? :create, Spree::Enquiry %>
 
+<% content_for :table_filter do %>
+  <%= search_form_for [:admin, @search] do |f| %>
+    <div data-hook="admin_enquiries_index_search">
+      <%= render partial: 'filter', locals: { f: f } %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= paginate @enquiries %>
+
 <% if @enquiries.any? %>
   <table class="table" id="listing_enquiries" data-hook>
     <thead>
@@ -53,3 +63,5 @@
     <%= link_to(Spree.t(:add_one), new_object_url) if can? :create, Spree::Enquiry %>!
   </div>
 <% end %>
+
+<%= paginate @enquiries %>
