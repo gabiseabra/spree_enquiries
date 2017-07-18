@@ -1,7 +1,7 @@
 <% content_for :page_title do %>
   <%= link_to plural_resource_name(Spree::Enquiry),
               spree.admin_enquiries_url %> /
-  <%= Spree.t(:new_enquiry, scope: :enquiries) %>
+  <%= Spree.t(:new_enquiry) %>
 <% end %>
 
 <%= render partial: 'spree/admin/shared/error_messages', locals: { target: @enquiry } %>

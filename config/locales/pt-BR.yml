@@ -1,0 +1,27 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+---
+pt-BR:
+  activerecord:
+    attributes:
+      spree/enquiry:
+        first_name: Nome
+        last_name: Sobrenome
+        email: Email
+        phone: Telefone
+        description: Descrição
+        notes: Observações Adicionais
+        state: Estado
+        start_date: Data de Solicitação
+        end_date: Date de Encerramento
+        state: Estado
+    models:
+      spree/enquiry:
+        one: Enquiry
+        other: Enquiries
+  spree:
+    enquiry_states:
+      pending: Pendente
+      concluded: Concluído
+    new_enquiry: Novo Pedido
+    show_active_enquiries: Mostrar apenas pedidos abertos

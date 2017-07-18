@@ -1,5 +1,27 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
+---
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      spree/enquiry:
+        first_name: First Name
+        last_name: Last Name
+        email: Email
+        phone: Phone
+        description: Description
+        notes: Additional Notes
+        state: State
+        start_date: Request Date
+        end_date: Expiration Date
+        state: State
+    models:
+      spree/enquiry:
+        one: Enquiry
+        other: Enquiries
+  spree:
+    enquiry_states:
+      pending: Pending
+      concluded: Concluded
+    new_enquiry: New Enquiry
+    show_active_enquiries: Show only active enquiries
