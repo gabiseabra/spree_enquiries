@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.description = 'Add (optional) extension description here'
   s.required_ruby_version = '>= 2.2.2'
 
-  s.author    = 'You'
-  s.email     = 'you@example.com'
-  s.homepage  = 'https://github.com/your-github-handle/spree_enquiries'
-  s.license = 'BSD-3-Clause'
+  s.author    = 'Gabriela Seabra'
+  s.email     = 'gabriela.lima.se@gmail.com'
+  s.homepage  = 'https://github.com/gabiseabra/spree_enquiries'
+  s.license   = 'BSD-3-Clause'
 
   # s.files       = `git ls-files`.split("\n")
   # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
