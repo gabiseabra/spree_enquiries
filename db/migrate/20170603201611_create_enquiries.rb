@@ -12,6 +12,6 @@ class CreateEnquiries < ActiveRecord::Migration[5.0]
       t.date :end_date
 
       t.timestamps
-    end
+    end 
   end
 end
