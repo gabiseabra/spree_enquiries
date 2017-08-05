@@ -9,8 +9,10 @@ pt-BR:
         last_name: Sobrenome
         email: Email
         phone: Telefone
+        title: &title Título
+        author: &author Autor
+        publisher: &publisher Editora
         description: Descrição
-        notes: Observações Adicionais
         state: Estado
         start_date: Data de Solicitação
         end_date: Date de Encerramento
@@ -20,6 +22,10 @@ pt-BR:
         one: Enquiry
         other: Enquiries
   spree:
+    book: Livro
+    title: *title
+    author: *author
+    publisher: *publisher
     enquiry_states:
       pending: Pendente
       concluded: Concluído

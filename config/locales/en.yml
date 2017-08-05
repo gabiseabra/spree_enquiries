@@ -9,8 +9,10 @@ en:
         last_name: Last Name
         email: Email
         phone: Phone
+        title: Title
+        author: Author  
+        publisher: Publisher
         description: Description
-        notes: Additional Notes
         state: State
         start_date: Request Date
         end_date: Expiration Date
@@ -20,6 +22,7 @@ en:
         one: Enquiry
         other: Enquiries
   spree:
+    book: Book
     enquiry_states:
       pending: Pending
       concluded: Concluded
