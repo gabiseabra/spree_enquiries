@@ -9,9 +9,9 @@ pt-BR:
         last_name: Sobrenome
         email: Email
         phone: Telefone
-        title: &title Título
-        author: &author Autor
-        publisher: &publisher Editora
+        title: Título
+        author: Autor
+        publisher: Editora
         description: Descrição
         state: Estado
         start_date: Data de Solicitação
@@ -19,13 +19,10 @@ pt-BR:
         state: Estado
     models:
       spree/enquiry:
-        one: Enquiry
-        other: Enquiries
+        one: Encomenda
+        other: Encomendas
   spree:
     book: Livro
-    title: *title
-    author: *author
-    publisher: *publisher
     enquiry_states:
       pending: Pendente
       concluded: Concluído

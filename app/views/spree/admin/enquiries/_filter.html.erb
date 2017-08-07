@@ -9,12 +9,12 @@
 <div class="row">
   <div class="form-group">
     <div class="col-xs-12 col-md-6">
-      <%= label_tag :q_title_cont, Spree.t(:title) %>
+      <%= label_tag :q_title_cont, Spree::Enquiry.human_attribute_name(:title) %>
       <%= f.text_field :title_cont, tabindex: 1, class: "form-control" %>
     </div>
 
     <div class="col-xs-12 col-md-6">
-      <%= label_tag :q_state_eq, Spree.t(:state) %>
+      <%= label_tag :q_state_eq, Spree::Enquiry.human_attribute_name(:state) %>
       <%= f.select :state_eq, Spree::Enquiry.states.map { |(name, id)| [Spree.t("enquiry_states.#{name}"), id] },
                    { include_blank: true },
                    { tabinxed: 1, class: "select2 js-filterable" } %>
@@ -23,12 +23,12 @@
 
   <div class="form-group">
     <div class="col-xs-12 col-md-6">
-      <%= label_tag :q_author_cont, Spree.t(:author) %>
+      <%= label_tag :q_author_cont, Spree::Enquiry.human_attribute_name(:author) %>
       <%= f.text_field :author_cont, tabindex: 1, class: "form-control" %>
     </div>
 
     <div class="col-xs-12 col-md-6">
-      <%= label_tag :q_publisher_cont, Spree.t(:publisher) %>
+      <%= label_tag :q_publisher_cont, Spree::Enquiry.human_attribute_name(:publisher) %>
       <%= f.text_field :publisher_cont, tabindex: 1, class: "form-control" %>
     </div>
   </div>
@@ -38,12 +38,12 @@
 <div class="row">
   <div class="form-group">
     <div class="col-xs-12 col-md-6">
-      <%= label_tag :q_first_name_cont, Spree.t(:first_name) %>
+      <%= label_tag :q_first_name_cont, Spree::Enquiry.human_attribute_name(:first_name) %>
       <%= f.text_field :first_name_cont, tabindex: 1, class: "form-control" %>
     </div>
 
     <div class="col-xs-12 col-md-6">
-      <%= label_tag :q_last_name_cont, Spree.t(:last_name) %>
+      <%= label_tag :q_last_name_cont, Spree::Enquiry.human_attribute_name(:last_name) %>
       <%= f.text_field :last_name_cont, tabindex: 1, class: "form-control" %>
     </div>
   </div>

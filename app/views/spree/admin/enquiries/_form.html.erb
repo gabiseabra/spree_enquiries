@@ -56,7 +56,9 @@
   <div class="col-xs-6 col-md-3">
     <%= f.field_container :state, class: ['form-group'] do %>
       <%= f.label :state %>
-      <%= f.select :state, Spree::Enquiry.states.keys.to_a, {}, class: 'select2' %>
+      <%= f.select :state, Spree::Enquiry.states.map { |(name, id)| [Spree.t("enquiry_states.#{name}"), id] },
+                   {},
+                   class: 'select2' %>
       <%= f.error_message_on :state %>
     <% end %>
 
