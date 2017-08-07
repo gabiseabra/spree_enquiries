@@ -7,7 +7,8 @@ Introduction goes here.
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_enquiries', github: '[your-github-handle]/spree_enquiries'
+  gem 'axlsx_rails'
+  gem 'spree_enquiries', github: 'gabiseabra/spree_enquiries'
   ```
 
 2. Install the gem using Bundler:

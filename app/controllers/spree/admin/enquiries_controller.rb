@@ -2,7 +2,10 @@ module Spree
   module Admin
     class EnquiriesController < ResourceController
       def index
-        respond_with(@collection)
+        respond_to do |f|
+          f.html
+          f.xlsx { render xlsx: 'index', filename: 'enquiries.xlsx' }
+        end
       end
 
       private
