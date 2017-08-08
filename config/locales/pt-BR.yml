@@ -26,5 +26,7 @@ pt-BR:
     enquiry_states:
       pending: Pendente
       concluded: Concluído
+    download_xlsx: Baixar XLSX
+    per_page: Resultados
     new_enquiry: Novo Pedido
     show_active_enquiries: Mostrar apenas pedidos abertos

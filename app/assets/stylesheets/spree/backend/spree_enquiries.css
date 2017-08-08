@@ -1,0 +1,13 @@
+label.per-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+label.per-page select {
+  width: 7em;
+}
+
+label.per-page span {
+  padding: 0 .5em;
+}

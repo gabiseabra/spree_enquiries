@@ -26,5 +26,7 @@ en:
     enquiry_states:
       pending: Pending
       concluded: Concluded
+    download_xlsx: Download XLSX
+    per_page: Results
     new_enquiry: New Enquiry
     show_active_enquiries: Show only active enquiries

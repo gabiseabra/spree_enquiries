@@ -59,6 +59,23 @@
   </div>
 </div>
 
-<div data-hook="admin_promotions_index_search_buttons" class="form-actions">
-  <%= button Spree.t(:filter_results), 'search' %>
+<div data-hook="admin_promotions_index_search_buttons" class="form-actions row">
+  <div class="col-xs-12 col-md-8">
+    <%= button Spree.t(:filter_results), 'search' %>
+    <%= button_tag(name: 'format',
+                   value: 'xlsx',
+                   formtarget: '_blank',
+                   class: 'btn btn-primary') do %>
+      <span class="icon icon-download-alt"></span>
+      <%= Spree.t(:download_xlsx) %>
+    <% end %>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <%= label_tag :per_page, class: 'per-page' do %>
+      <%= select_tag :per_page,
+                     options_for_select(%w[25 50 100 250], params[:per_page]),
+                     class: "form-control pull-right" %>
+      <span><%= Spree.t(:per_page) %></span>
+    <% end %>
+  </div>
 </div>
