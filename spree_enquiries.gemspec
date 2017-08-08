@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_enquiries'
   s.version     = SpreeEnquiries.version
-  s.summary     = 'Add extension summary here'
-  s.description = 'Add (optional) extension description here'
+  s.summary     = 'Add enquiries to spree admin'
+  s.description = 'Add enquiries to spree admin'
   s.required_ruby_version = '>= 2.2.2'
 
   s.author    = 'Gabriela Seabra'
