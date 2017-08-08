@@ -61,7 +61,11 @@
 
 <div data-hook="admin_promotions_index_search_buttons" class="form-actions row">
   <div class="col-xs-12 col-md-8">
-    <%= button Spree.t(:filter_results), 'search' %>
+    <%#= button Spree.t(:filter_results), 'search' %>
+    <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+      <span class="icon icon-search"></span>
+      <%= Spree.t(:filter_results) %>
+    <% end %>
     <%= button_tag(name: 'format',
                    value: 'xlsx',
                    formtarget: '_blank',
