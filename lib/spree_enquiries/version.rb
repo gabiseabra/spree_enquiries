@@ -10,7 +10,7 @@ module SpreeEnquiries
   module VERSION
     MAJOR = 1
     MINOR = 3
-    TINY  = 1
+    TINY  = 2
 
     STRING = [MAJOR, MINOR, TINY].compact.join('.')
   end
